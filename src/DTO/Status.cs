@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    internal class Lich
+    internal class Status
     {
-        public string MaLich { get; set; } = string.Empty;
-       
     }
 }

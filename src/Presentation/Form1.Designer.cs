@@ -33,9 +33,22 @@
             // 
             // monthCalendar1
             // 
+<<<<<<< HEAD
             this.monthCalendar1.Location = new System.Drawing.Point(27, 136);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
+=======
+<<<<<<< HEAD
+            this.monthCalendar1.Location = new System.Drawing.Point(126, 115);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 0;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+=======
+            this.monthCalendar1.Location = new System.Drawing.Point(27, 136);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 0;
+>>>>>>> 972406c (Chinh winform)
+>>>>>>> 8728929caa8d05bc83b570faaa51da6d9dd2ac50
             // 
             // Form1
             // 

@@ -28,217 +28,401 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox2.SuspendLayout();
+            this.cboTaskTypeFilter = new System.Windows.Forms.ComboBox();
+            this.lblPriority = new System.Windows.Forms.Label();
+            this.lblFilter = new System.Windows.Forms.Label();
+            this.grpFilter = new System.Windows.Forms.GroupBox();
+            this.chkNormal = new System.Windows.Forms.CheckBox();
+            this.chkImportant = new System.Windows.Forms.CheckBox();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.lblTaskType = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblEndDate = new System.Windows.Forms.Label();
+            this.dtpEndDateFilter = new System.Windows.Forms.DateTimePicker();
+            this.lblStartDate = new System.Windows.Forms.Label();
+            this.dtpStartDateFilter = new System.Windows.Forms.DateTimePicker();
+            this.lblCreateTask = new System.Windows.Forms.Label();
+            this.cboTaskTypeCreate = new System.Windows.Forms.ComboBox();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnSaveJSON = new System.Windows.Forms.Button();
+            this.lblTaskList = new System.Windows.Forms.Label();
+            this.btnMarkDone = new System.Windows.Forms.Button();
+            this.dgvTasks = new System.Windows.Forms.DataGridView();
+            this.btnLoadJSON = new System.Windows.Forms.Button();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.chkDone = new System.Windows.Forms.CheckBox();
+            this.chkInProgress = new System.Windows.Forms.CheckBox();
+            this.chkOverdue = new System.Windows.Forms.CheckBox();
+            this.btnApplyFilter = new System.Windows.Forms.Button();
+            this.colMaCongViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoaiCongViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThoiGianBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThoiGianKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMucDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grpFilter.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cboTaskTypeFilter
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboTaskTypeFilter.FormattingEnabled = true;
+            this.cboTaskTypeFilter.Items.AddRange(new object[] {
             "Việc cần làm",
             "Sự kiện",
             "Lên lịch hẹn"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 24);
-            this.comboBox1.TabIndex = 20;
-            this.comboBox1.Text = "Lựa chọn  ";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cboTaskTypeFilter.Location = new System.Drawing.Point(10, 55);
+            this.cboTaskTypeFilter.Name = "cboTaskTypeFilter";
+            this.cboTaskTypeFilter.Size = new System.Drawing.Size(185, 24);
+            this.cboTaskTypeFilter.TabIndex = 20;
+            this.cboTaskTypeFilter.Text = "Lựa chọn  ";
+            this.cboTaskTypeFilter.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // label1
+            // lblPriority
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Mức độ";
+            this.lblPriority.AutoSize = true;
+            this.lblPriority.Location = new System.Drawing.Point(10, 99);
+            this.lblPriority.Name = "lblPriority";
+            this.lblPriority.Size = new System.Drawing.Size(51, 16);
+            this.lblPriority.TabIndex = 30;
+            this.lblPriority.Text = "Mức độ";
+            this.lblPriority.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // label2
+            // lblFilter
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(67, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Tùy chỉnh";
+            this.lblFilter.AutoSize = true;
+            this.lblFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilter.Location = new System.Drawing.Point(118, 18);
+            this.lblFilter.Name = "lblFilter";
+            this.lblFilter.Size = new System.Drawing.Size(42, 20);
+            this.lblFilter.TabIndex = 33;
+            this.lblFilter.Text = "Lọc ";
             // 
-            // groupBox2
+            // grpFilter
             // 
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(538, 86);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(289, 332);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            this.grpFilter.Controls.Add(this.btnApplyFilter);
+            this.grpFilter.Controls.Add(this.chkOverdue);
+            this.grpFilter.Controls.Add(this.chkInProgress);
+            this.grpFilter.Controls.Add(this.chkDone);
+            this.grpFilter.Controls.Add(this.lblStatus);
+            this.grpFilter.Controls.Add(this.chkNormal);
+            this.grpFilter.Controls.Add(this.chkImportant);
+            this.grpFilter.Controls.Add(this.lblTaskType);
+            this.grpFilter.Controls.Add(this.cboTaskTypeFilter);
+            this.grpFilter.Controls.Add(this.lblEndDate);
+            this.grpFilter.Controls.Add(this.dtpEndDateFilter);
+            this.grpFilter.Controls.Add(this.lblStartDate);
+            this.grpFilter.Controls.Add(this.lblPriority);
+            this.grpFilter.Controls.Add(this.dtpStartDateFilter);
+            this.grpFilter.Controls.Add(this.lblFilter);
+            this.grpFilter.Location = new System.Drawing.Point(32, 137);
+            this.grpFilter.Name = "grpFilter";
+            this.grpFilter.Size = new System.Drawing.Size(289, 332);
+            this.grpFilter.TabIndex = 21;
+            this.grpFilter.TabStop = false;
+            this.grpFilter.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // checkBox2
+            // chkNormal
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(13, 159);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(98, 20);
-            this.checkBox2.TabIndex = 41;
-            this.checkBox2.Text = "Bình thường";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkNormal.AutoSize = true;
+            this.chkNormal.Location = new System.Drawing.Point(13, 144);
+            this.chkNormal.Name = "chkNormal";
+            this.chkNormal.Size = new System.Drawing.Size(98, 20);
+            this.chkNormal.TabIndex = 41;
+            this.chkNormal.Text = "Bình thường";
+            this.chkNormal.UseVisualStyleBackColor = true;
+            this.chkNormal.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
-            // checkBox1
+            // chkImportant
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(13, 133);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(94, 20);
-            this.checkBox1.TabIndex = 40;
-            this.checkBox1.Text = "Quan trọng";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkImportant.AutoSize = true;
+            this.chkImportant.Location = new System.Drawing.Point(13, 118);
+            this.chkImportant.Name = "chkImportant";
+            this.chkImportant.Size = new System.Drawing.Size(94, 20);
+            this.chkImportant.TabIndex = 40;
+            this.chkImportant.Text = "Quan trọng";
+            this.chkImportant.UseVisualStyleBackColor = true;
+            this.chkImportant.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // button3
+            // btnEdit
             // 
-            this.button3.Location = new System.Drawing.Point(122, 292);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 34);
-            this.button3.TabIndex = 39;
-            this.button3.Text = "Chỉnh sửa";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEdit.Location = new System.Drawing.Point(1256, 475);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(106, 34);
+            this.btnEdit.TabIndex = 39;
+            this.btnEdit.Text = "Chỉnh sửa";
+            this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lblTaskType
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 16);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Loại công việc ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblTaskType.AutoSize = true;
+            this.lblTaskType.Location = new System.Drawing.Point(10, 36);
+            this.lblTaskType.Name = "lblTaskType";
+            this.lblTaskType.Size = new System.Drawing.Size(97, 16);
+            this.lblTaskType.TabIndex = 20;
+            this.lblTaskType.Text = "Loại công việc ";
+            this.lblTaskType.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // btnDelete
             // 
-            this.button1.Location = new System.Drawing.Point(10, 292);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 34);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Xóa";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(1368, 475);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(106, 34);
+            this.btnDelete.TabIndex = 38;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lblEndDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 233);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 16);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "Ngày kết thúc";
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Location = new System.Drawing.Point(10, 233);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(88, 16);
+            this.lblEndDate.TabIndex = 37;
+            this.lblEndDate.Text = "Ngày kết thúc";
             // 
-            // dateTimePicker2
+            // dtpEndDateFilter
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(10, 252);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(273, 22);
-            this.dateTimePicker2.TabIndex = 36;
+            this.dtpEndDateFilter.Location = new System.Drawing.Point(10, 252);
+            this.dtpEndDateFilter.Name = "dtpEndDateFilter";
+            this.dtpEndDateFilter.Size = new System.Drawing.Size(273, 22);
+            this.dtpEndDateFilter.TabIndex = 36;
             // 
-            // label3
+            // lblStartDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 183);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "Ngày bắt đầu";
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Location = new System.Drawing.Point(10, 183);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(88, 16);
+            this.lblStartDate.TabIndex = 35;
+            this.lblStartDate.Text = "Ngày bắt đầu";
             // 
-            // dateTimePicker1
+            // dtpStartDateFilter
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(10, 202);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(273, 22);
-            this.dateTimePicker1.TabIndex = 34;
+            this.dtpStartDateFilter.Location = new System.Drawing.Point(10, 202);
+            this.dtpStartDateFilter.Name = "dtpStartDateFilter";
+            this.dtpStartDateFilter.Size = new System.Drawing.Size(273, 22);
+            this.dtpStartDateFilter.TabIndex = 34;
             // 
-            // listBox1
+            // lblCreateTask
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(37, 94);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(495, 324);
-            this.listBox1.TabIndex = 33;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lblCreateTask.AutoSize = true;
+            this.lblCreateTask.Location = new System.Drawing.Point(31, 23);
+            this.lblCreateTask.Name = "lblCreateTask";
+            this.lblCreateTask.Size = new System.Drawing.Size(96, 16);
+            this.lblCreateTask.TabIndex = 39;
+            this.lblCreateTask.Text = "Tạo công việc ";
+            this.lblCreateTask.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label6
+            // cboTaskTypeCreate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(81, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 16);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "Tạo công việc ";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cboTaskTypeCreate.FormattingEnabled = true;
+            this.cboTaskTypeCreate.Items.AddRange(new object[] {
             "Việc cần làm",
             "Sự kiện",
             "Lên lịch hẹn"});
-            this.comboBox2.Location = new System.Drawing.Point(81, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(185, 24);
-            this.comboBox2.TabIndex = 40;
-            this.comboBox2.Text = "Lựa chọn  ";
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cboTaskTypeCreate.Location = new System.Drawing.Point(31, 42);
+            this.cboTaskTypeCreate.Name = "cboTaskTypeCreate";
+            this.cboTaskTypeCreate.Size = new System.Drawing.Size(185, 24);
+            this.cboTaskTypeCreate.TabIndex = 40;
+            this.cboTaskTypeCreate.Text = "Lựa chọn  ";
+            this.cboTaskTypeCreate.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // button2
+            // btnCreate
             // 
-            this.button2.Location = new System.Drawing.Point(272, 34);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 34);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Tạo";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnCreate.Location = new System.Drawing.Point(222, 36);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(106, 34);
+            this.btnCreate.TabIndex = 39;
+            this.btnCreate.Text = "Tạo";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // btnSaveJSON
+            // 
+            this.btnSaveJSON.Location = new System.Drawing.Point(334, 36);
+            this.btnSaveJSON.Name = "btnSaveJSON";
+            this.btnSaveJSON.Size = new System.Drawing.Size(106, 34);
+            this.btnSaveJSON.TabIndex = 43;
+            this.btnSaveJSON.Text = "Lưu JSON";
+            this.btnSaveJSON.UseVisualStyleBackColor = true;
+            // 
+            // lblTaskList
+            // 
+            this.lblTaskList.AutoSize = true;
+            this.lblTaskList.Location = new System.Drawing.Point(324, 126);
+            this.lblTaskList.Name = "lblTaskList";
+            this.lblTaskList.Size = new System.Drawing.Size(132, 16);
+            this.lblTaskList.TabIndex = 44;
+            this.lblTaskList.Text = "Danh sách công việc";
+            // 
+            // btnMarkDone
+            // 
+            this.btnMarkDone.Location = new System.Drawing.Point(1307, 105);
+            this.btnMarkDone.Name = "btnMarkDone";
+            this.btnMarkDone.Size = new System.Drawing.Size(167, 34);
+            this.btnMarkDone.TabIndex = 45;
+            this.btnMarkDone.Text = "Đánh dấu đã làm";
+            this.btnMarkDone.UseVisualStyleBackColor = true;
+            // 
+            // dgvTasks
+            // 
+            this.dgvTasks.AllowUserToAddRows = false;
+            this.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMaCongViec,
+            this.colTieuDe,
+            this.colLoaiCongViec,
+            this.colThoiGianBatDau,
+            this.colThoiGianKetThuc,
+            this.colMucDo,
+            this.colTrangThai,
+            this.colMoTa});
+            this.dgvTasks.Location = new System.Drawing.Point(327, 145);
+            this.dgvTasks.Name = "dgvTasks";
+            this.dgvTasks.RowHeadersWidth = 51;
+            this.dgvTasks.RowTemplate.Height = 24;
+            this.dgvTasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTasks.Size = new System.Drawing.Size(1147, 324);
+            this.dgvTasks.TabIndex = 46;
+            // 
+            // btnLoadJSON
+            // 
+            this.btnLoadJSON.Location = new System.Drawing.Point(446, 36);
+            this.btnLoadJSON.Name = "btnLoadJSON";
+            this.btnLoadJSON.Size = new System.Drawing.Size(106, 34);
+            this.btnLoadJSON.TabIndex = 47;
+            this.btnLoadJSON.Text = "Load JSON";
+            this.btnLoadJSON.UseVisualStyleBackColor = true;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(165, 99);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(67, 16);
+            this.lblStatus.TabIndex = 42;
+            this.lblStatus.Text = "Trạng thái";
+            // 
+            // chkDone
+            // 
+            this.chkDone.AutoSize = true;
+            this.chkDone.Location = new System.Drawing.Point(168, 118);
+            this.chkDone.Name = "chkDone";
+            this.chkDone.Size = new System.Drawing.Size(71, 20);
+            this.chkDone.TabIndex = 43;
+            this.chkDone.Text = "Đã làm";
+            this.chkDone.UseVisualStyleBackColor = true;
+            // 
+            // chkInProgress
+            // 
+            this.chkInProgress.AutoSize = true;
+            this.chkInProgress.Location = new System.Drawing.Point(168, 144);
+            this.chkInProgress.Name = "chkInProgress";
+            this.chkInProgress.Size = new System.Drawing.Size(86, 20);
+            this.chkInProgress.TabIndex = 44;
+            this.chkInProgress.Text = "Đang làm";
+            this.chkInProgress.UseVisualStyleBackColor = true;
+            // 
+            // chkOverdue
+            // 
+            this.chkOverdue.AutoSize = true;
+            this.chkOverdue.Location = new System.Drawing.Point(168, 170);
+            this.chkOverdue.Name = "chkOverdue";
+            this.chkOverdue.Size = new System.Drawing.Size(87, 20);
+            this.chkOverdue.TabIndex = 45;
+            this.chkOverdue.Text = "Quá hạng";
+            this.chkOverdue.UseVisualStyleBackColor = true;
+            // 
+            // btnApplyFilter
+            // 
+            this.btnApplyFilter.Location = new System.Drawing.Point(89, 292);
+            this.btnApplyFilter.Name = "btnApplyFilter";
+            this.btnApplyFilter.Size = new System.Drawing.Size(106, 34);
+            this.btnApplyFilter.TabIndex = 48;
+            this.btnApplyFilter.Text = "Lọc";
+            this.btnApplyFilter.UseVisualStyleBackColor = true;
+            // 
+            // colMaCongViec
+            // 
+            this.colMaCongViec.HeaderText = "Mã";
+            this.colMaCongViec.MinimumWidth = 6;
+            this.colMaCongViec.Name = "colMaCongViec";
+            this.colMaCongViec.Width = 125;
+            // 
+            // colTieuDe
+            // 
+            this.colTieuDe.HeaderText = "Tiêu đề";
+            this.colTieuDe.MinimumWidth = 6;
+            this.colTieuDe.Name = "colTieuDe";
+            this.colTieuDe.Width = 125;
+            // 
+            // colLoaiCongViec
+            // 
+            this.colLoaiCongViec.HeaderText = "Loại công việc";
+            this.colLoaiCongViec.MinimumWidth = 6;
+            this.colLoaiCongViec.Name = "colLoaiCongViec";
+            this.colLoaiCongViec.Width = 125;
+            // 
+            // colThoiGianBatDau
+            // 
+            this.colThoiGianBatDau.HeaderText = "Thời gian bắt đầu";
+            this.colThoiGianBatDau.MinimumWidth = 6;
+            this.colThoiGianBatDau.Name = "colThoiGianBatDau";
+            this.colThoiGianBatDau.Width = 125;
+            // 
+            // colThoiGianKetThuc
+            // 
+            this.colThoiGianKetThuc.HeaderText = "Thời gian kết thúc";
+            this.colThoiGianKetThuc.MinimumWidth = 6;
+            this.colThoiGianKetThuc.Name = "colThoiGianKetThuc";
+            this.colThoiGianKetThuc.Width = 125;
+            // 
+            // colMucDo
+            // 
+            this.colMucDo.HeaderText = "Mức độ";
+            this.colMucDo.MinimumWidth = 6;
+            this.colMucDo.Name = "colMucDo";
+            this.colMucDo.Width = 125;
+            // 
+            // colTrangThai
+            // 
+            this.colTrangThai.HeaderText = "Trạng thái";
+            this.colTrangThai.MinimumWidth = 6;
+            this.colTrangThai.Name = "colTrangThai";
+            this.colTrangThai.Width = 125;
+            // 
+            // colMoTa
+            // 
+            this.colMoTa.HeaderText = "Mô tả";
+            this.colMoTa.MinimumWidth = 6;
+            this.colMoTa.Name = "colMoTa";
+            this.colMoTa.Width = 125;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(1502, 563);
+            this.Controls.Add(this.btnLoadJSON);
+            this.Controls.Add(this.dgvTasks);
+            this.Controls.Add(this.btnMarkDone);
+            this.Controls.Add(this.lblTaskList);
+            this.Controls.Add(this.btnSaveJSON);
+            this.Controls.Add(this.btnCreate);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.lblCreateTask);
+            this.Controls.Add(this.cboTaskTypeCreate);
+            this.Controls.Add(this.grpFilter);
             this.Name = "Home";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.grpFilter.ResumeLayout(false);
+            this.grpFilter.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,23 +430,40 @@
 
 
         #endregion
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox cboTaskTypeFilter;
+        private System.Windows.Forms.GroupBox grpFilter;
+        private System.Windows.Forms.Label lblPriority;
+        private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.DateTimePicker dtpEndDateFilter;
+        private System.Windows.Forms.Label lblStartDate;
+        private System.Windows.Forms.DateTimePicker dtpStartDateFilter;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lblCreateTask;
+        private System.Windows.Forms.ComboBox cboTaskTypeCreate;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Label lblTaskType;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.CheckBox chkNormal;
+        private System.Windows.Forms.CheckBox chkImportant;
+        private System.Windows.Forms.Button btnSaveJSON;
+        public System.Windows.Forms.Label lblFilter;
+        private System.Windows.Forms.Label lblTaskList;
+        private System.Windows.Forms.Button btnMarkDone;
+        private System.Windows.Forms.DataGridView dgvTasks;
+        private System.Windows.Forms.Button btnLoadJSON;
+        private System.Windows.Forms.CheckBox chkOverdue;
+        private System.Windows.Forms.CheckBox chkInProgress;
+        private System.Windows.Forms.CheckBox chkDone;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnApplyFilter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaCongViec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTieuDe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiCongViec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThoiGianBatDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThoiGianKetThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMucDo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
     }
 }
 

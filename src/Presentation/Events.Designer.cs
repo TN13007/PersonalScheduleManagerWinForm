@@ -28,147 +28,185 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.txtEndTime = new System.Windows.Forms.TextBox();
+            this.txtStartTime = new System.Windows.Forms.TextBox();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.lblEndDate = new System.Windows.Forms.Label();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lblStartDate = new System.Windows.Forms.Label();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.txtLocation = new System.Windows.Forms.TextBox();
+            this.lblLocation = new System.Windows.Forms.Label();
+            this.rdoNormal = new System.Windows.Forms.RadioButton();
+            this.rdoImportant = new System.Windows.Forms.RadioButton();
+            this.lblPriority = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox4
+            // txtDescription
             // 
-            this.textBox4.Location = new System.Drawing.Point(67, 318);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(318, 98);
-            this.textBox4.TabIndex = 50;
+            this.txtDescription.Location = new System.Drawing.Point(67, 318);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(318, 98);
+            this.txtDescription.TabIndex = 50;
             // 
-            // label5
+            // lblDescription
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 288);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 16);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Mô tả công việc";
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Location = new System.Drawing.Point(64, 288);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(101, 16);
+            this.lblDescription.TabIndex = 49;
+            this.lblDescription.Text = "Mô tả công việc";
             // 
-            // textBox3
+            // txtEndTime
             // 
-            this.textBox3.Location = new System.Drawing.Point(65, 249);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(85, 22);
-            this.textBox3.TabIndex = 48;
-            this.textBox3.Text = "00:00";
+            this.txtEndTime.Location = new System.Drawing.Point(65, 249);
+            this.txtEndTime.Name = "txtEndTime";
+            this.txtEndTime.Size = new System.Drawing.Size(85, 22);
+            this.txtEndTime.TabIndex = 48;
+            this.txtEndTime.Text = "00:00";
             // 
-            // textBox2
+            // txtStartTime
             // 
-            this.textBox2.Location = new System.Drawing.Point(65, 194);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 22);
-            this.textBox2.TabIndex = 47;
-            this.textBox2.Text = "00:00";
+            this.txtStartTime.Location = new System.Drawing.Point(65, 194);
+            this.txtStartTime.Name = "txtStartTime";
+            this.txtStartTime.Size = new System.Drawing.Size(85, 22);
+            this.txtStartTime.TabIndex = 47;
+            this.txtStartTime.Text = "00:00";
             // 
-            // dateTimePicker2
+            // dtpEndDate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(165, 249);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(220, 22);
-            this.dateTimePicker2.TabIndex = 46;
+            this.dtpEndDate.Location = new System.Drawing.Point(165, 249);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(220, 22);
+            this.dtpEndDate.TabIndex = 46;
             // 
-            // label4
+            // lblEndDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 219);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 16);
-            this.label4.TabIndex = 43;
-            this.label4.Text = "Ngày kết thúc";
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.Location = new System.Drawing.Point(62, 219);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(88, 16);
+            this.lblEndDate.TabIndex = 43;
+            this.lblEndDate.Text = "Ngày kết thúc";
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(67, 437);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 40);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(67, 508);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(144, 40);
+            this.btnAdd.TabIndex = 37;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // lblStartDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(62, 169);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Ngày bắt đầu";
+            this.lblStartDate.AutoSize = true;
+            this.lblStartDate.Location = new System.Drawing.Point(62, 169);
+            this.lblStartDate.Name = "lblStartDate";
+            this.lblStartDate.Size = new System.Drawing.Size(88, 16);
+            this.lblStartDate.TabIndex = 42;
+            this.lblStartDate.Text = "Ngày bắt đầu";
             // 
-            // dateTimePicker1
+            // dtpStartDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(165, 194);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(220, 22);
-            this.dateTimePicker1.TabIndex = 41;
+            this.dtpStartDate.Location = new System.Drawing.Point(165, 194);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(220, 22);
+            this.dtpStartDate.TabIndex = 41;
             // 
-            // label2
+            // lblTitle
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(62, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 16);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "Tiêu đề";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Location = new System.Drawing.Point(62, 44);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(53, 16);
+            this.lblTitle.TabIndex = 40;
+            this.lblTitle.Text = "Tiêu đề";
             // 
-            // textBox1
+            // txtTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(197, 22);
-            this.textBox1.TabIndex = 39;
+            this.txtTitle.Location = new System.Drawing.Point(62, 63);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(197, 22);
+            this.txtTitle.TabIndex = 39;
             // 
-            // textBox5
+            // txtLocation
             // 
-            this.textBox5.Location = new System.Drawing.Point(62, 129);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(197, 22);
-            this.textBox5.TabIndex = 51;
+            this.txtLocation.Location = new System.Drawing.Point(62, 129);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.Size = new System.Drawing.Size(197, 22);
+            this.txtLocation.TabIndex = 51;
             // 
-            // label1
+            // lblLocation
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 16);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Địa điểm";
+            this.lblLocation.AutoSize = true;
+            this.lblLocation.Location = new System.Drawing.Point(62, 101);
+            this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Size = new System.Drawing.Size(60, 16);
+            this.lblLocation.TabIndex = 52;
+            this.lblLocation.Text = "Địa điểm";
             // 
-            // Form2
+            // rdoNormal
+            // 
+            this.rdoNormal.AutoSize = true;
+            this.rdoNormal.Location = new System.Drawing.Point(72, 472);
+            this.rdoNormal.Name = "rdoNormal";
+            this.rdoNormal.Size = new System.Drawing.Size(97, 20);
+            this.rdoNormal.TabIndex = 55;
+            this.rdoNormal.Text = "Bình thường";
+            this.rdoNormal.UseVisualStyleBackColor = true;
+            // 
+            // rdoImportant
+            // 
+            this.rdoImportant.AutoSize = true;
+            this.rdoImportant.Checked = true;
+            this.rdoImportant.Location = new System.Drawing.Point(72, 446);
+            this.rdoImportant.Name = "rdoImportant";
+            this.rdoImportant.Size = new System.Drawing.Size(93, 20);
+            this.rdoImportant.TabIndex = 54;
+            this.rdoImportant.TabStop = true;
+            this.rdoImportant.Text = "Quan trọng";
+            this.rdoImportant.UseVisualStyleBackColor = true;
+            // 
+            // lblPriority
+            // 
+            this.lblPriority.AutoSize = true;
+            this.lblPriority.Location = new System.Drawing.Point(69, 427);
+            this.lblPriority.Name = "lblPriority";
+            this.lblPriority.Size = new System.Drawing.Size(51, 16);
+            this.lblPriority.TabIndex = 53;
+            this.lblPriority.Text = "Mức độ";
+            // 
+            // Events
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 553);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form2";
+            this.ClientSize = new System.Drawing.Size(432, 644);
+            this.Controls.Add(this.rdoNormal);
+            this.Controls.Add(this.rdoImportant);
+            this.Controls.Add(this.lblPriority);
+            this.Controls.Add(this.lblLocation);
+            this.Controls.Add(this.txtLocation);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.lblDescription);
+            this.Controls.Add(this.txtEndTime);
+            this.Controls.Add(this.txtStartTime);
+            this.Controls.Add(this.dtpEndDate);
+            this.Controls.Add(this.lblEndDate);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.lblStartDate);
+            this.Controls.Add(this.dtpStartDate);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.txtTitle);
+            this.Name = "Events";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Events_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,18 +214,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Label lblDescription;
+        private System.Windows.Forms.TextBox txtEndTime;
+        private System.Windows.Forms.TextBox txtStartTime;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Label lblStartDate;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.TextBox txtLocation;
+        private System.Windows.Forms.Label lblLocation;
+        private System.Windows.Forms.RadioButton rdoNormal;
+        private System.Windows.Forms.RadioButton rdoImportant;
+        private System.Windows.Forms.Label lblPriority;
     }
 }

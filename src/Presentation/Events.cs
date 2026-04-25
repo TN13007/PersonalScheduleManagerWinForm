@@ -16,5 +16,10 @@ namespace Presentation
         {
             InitializeComponent();
         }
+
+        private void Events_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

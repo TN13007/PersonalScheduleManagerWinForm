@@ -105,7 +105,7 @@ namespace Presentation
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string selectedValue = comboBox2.SelectedItem?.ToString() ?? "";
+            string selectedValue = cboTaskTypeCreate.SelectedItem?.ToString() ?? "";
             switch (selectedValue)
             {
                 case "Việc cần làm":
@@ -121,6 +121,31 @@ namespace Presentation
                     MessageBox.Show("Vui lòng chọn một loại để tạo.");
                     break;
             }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

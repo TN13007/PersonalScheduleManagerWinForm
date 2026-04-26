@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class Events : Form
+    public partial class Event : Form
     {
         private ToolTip toolTip;
         private Timer fadeTimer;
         private bool hasChanges = false;
 
-        public Events()
+        public Event()
         {
             InitializeComponent();
             ApplyGoogleCalendarTheme();

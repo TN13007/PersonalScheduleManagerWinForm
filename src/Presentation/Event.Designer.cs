@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class Events
+    partial class Event
     {
         /// <summary>
         /// Required designer variable.

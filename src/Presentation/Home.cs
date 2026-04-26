@@ -386,7 +386,7 @@ namespace Presentation
                     new Doing().Show();
                     break;
                 case "Sự kiện":
-                    new Events().Show();
+                    new Event().Show();
                     break;
                 case "Lên lịch hẹn":
                     new FastMeeting().Show();

@@ -32,36 +32,27 @@
             this.lblPriority = new System.Windows.Forms.Label();
             this.lblFilter = new System.Windows.Forms.Label();
             this.grpFilter = new System.Windows.Forms.GroupBox();
+            this.btnApplyFilter = new System.Windows.Forms.Button();
+            this.chkOverdue = new System.Windows.Forms.CheckBox();
+            this.chkInProgress = new System.Windows.Forms.CheckBox();
+            this.chkDone = new System.Windows.Forms.CheckBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.chkNormal = new System.Windows.Forms.CheckBox();
             this.chkImportant = new System.Windows.Forms.CheckBox();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.lblTaskType = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.lblEndDate = new System.Windows.Forms.Label();
             this.dtpEndDateFilter = new System.Windows.Forms.DateTimePicker();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.dtpStartDateFilter = new System.Windows.Forms.DateTimePicker();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.lblCreateTask = new System.Windows.Forms.Label();
             this.cboTaskTypeCreate = new System.Windows.Forms.ComboBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnSaveJSON = new System.Windows.Forms.Button();
             this.lblTaskList = new System.Windows.Forms.Label();
-            this.btnMarkDone = new System.Windows.Forms.Button();
             this.dgvTasks = new System.Windows.Forms.DataGridView();
             this.btnLoadJSON = new System.Windows.Forms.Button();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.chkDone = new System.Windows.Forms.CheckBox();
-            this.chkInProgress = new System.Windows.Forms.CheckBox();
-            this.chkOverdue = new System.Windows.Forms.CheckBox();
-            this.btnApplyFilter = new System.Windows.Forms.Button();
-            this.colMaCongViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTieuDe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLoaiCongViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colThoiGianBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colThoiGianKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMucDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +69,6 @@
             this.cboTaskTypeFilter.Size = new System.Drawing.Size(185, 24);
             this.cboTaskTypeFilter.TabIndex = 20;
             this.cboTaskTypeFilter.Text = "Lựa chọn  ";
-            this.cboTaskTypeFilter.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblPriority
             // 
@@ -88,7 +78,6 @@
             this.lblPriority.Size = new System.Drawing.Size(51, 16);
             this.lblPriority.TabIndex = 30;
             this.lblPriority.Text = "Mức độ";
-            this.lblPriority.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblFilter
             // 
@@ -122,7 +111,54 @@
             this.grpFilter.Size = new System.Drawing.Size(289, 332);
             this.grpFilter.TabIndex = 21;
             this.grpFilter.TabStop = false;
-            this.grpFilter.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btnApplyFilter
+            // 
+            this.btnApplyFilter.Location = new System.Drawing.Point(89, 292);
+            this.btnApplyFilter.Name = "btnApplyFilter";
+            this.btnApplyFilter.Size = new System.Drawing.Size(106, 34);
+            this.btnApplyFilter.TabIndex = 48;
+            this.btnApplyFilter.Text = "Lọc";
+            this.btnApplyFilter.UseVisualStyleBackColor = true;
+            // 
+            // chkOverdue
+            // 
+            this.chkOverdue.AutoSize = true;
+            this.chkOverdue.Location = new System.Drawing.Point(168, 170);
+            this.chkOverdue.Name = "chkOverdue";
+            this.chkOverdue.Size = new System.Drawing.Size(87, 20);
+            this.chkOverdue.TabIndex = 45;
+            this.chkOverdue.Text = "Quá hạn";
+            this.chkOverdue.UseVisualStyleBackColor = true;
+            // 
+            // chkInProgress
+            // 
+            this.chkInProgress.AutoSize = true;
+            this.chkInProgress.Location = new System.Drawing.Point(168, 144);
+            this.chkInProgress.Name = "chkInProgress";
+            this.chkInProgress.Size = new System.Drawing.Size(86, 20);
+            this.chkInProgress.TabIndex = 44;
+            this.chkInProgress.Text = "Đang làm";
+            this.chkInProgress.UseVisualStyleBackColor = true;
+            // 
+            // chkDone
+            // 
+            this.chkDone.AutoSize = true;
+            this.chkDone.Location = new System.Drawing.Point(168, 118);
+            this.chkDone.Name = "chkDone";
+            this.chkDone.Size = new System.Drawing.Size(71, 20);
+            this.chkDone.TabIndex = 43;
+            this.chkDone.Text = "Đã làm";
+            this.chkDone.UseVisualStyleBackColor = true;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(165, 99);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(67, 16);
+            this.lblStatus.TabIndex = 42;
+            this.lblStatus.Text = "Trạng thái";
             // 
             // chkNormal
             // 
@@ -133,7 +169,6 @@
             this.chkNormal.TabIndex = 41;
             this.chkNormal.Text = "Bình thường";
             this.chkNormal.UseVisualStyleBackColor = true;
-            this.chkNormal.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // chkImportant
             // 
@@ -144,16 +179,6 @@
             this.chkImportant.TabIndex = 40;
             this.chkImportant.Text = "Quan trọng";
             this.chkImportant.UseVisualStyleBackColor = true;
-            this.chkImportant.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(1256, 475);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(106, 34);
-            this.btnEdit.TabIndex = 39;
-            this.btnEdit.Text = "Chỉnh sửa";
-            this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // lblTaskType
             // 
@@ -163,16 +188,6 @@
             this.lblTaskType.Size = new System.Drawing.Size(97, 16);
             this.lblTaskType.TabIndex = 20;
             this.lblTaskType.Text = "Loại công việc ";
-            this.lblTaskType.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(1368, 475);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(106, 34);
-            this.btnDelete.TabIndex = 38;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // lblEndDate
             // 
@@ -206,6 +221,24 @@
             this.dtpStartDateFilter.Size = new System.Drawing.Size(273, 22);
             this.dtpStartDateFilter.TabIndex = 34;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(1256, 475);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(106, 34);
+            this.btnEdit.TabIndex = 39;
+            this.btnEdit.Text = "Chỉnh sửa";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(1368, 475);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(106, 34);
+            this.btnDelete.TabIndex = 38;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // lblCreateTask
             // 
             this.lblCreateTask.AutoSize = true;
@@ -214,7 +247,6 @@
             this.lblCreateTask.Size = new System.Drawing.Size(96, 16);
             this.lblCreateTask.TabIndex = 39;
             this.lblCreateTask.Text = "Tạo công việc ";
-            this.lblCreateTask.Click += new System.EventHandler(this.label6_Click);
             // 
             // cboTaskTypeCreate
             // 
@@ -228,7 +260,6 @@
             this.cboTaskTypeCreate.Size = new System.Drawing.Size(185, 24);
             this.cboTaskTypeCreate.TabIndex = 40;
             this.cboTaskTypeCreate.Text = "Lựa chọn  ";
-            this.cboTaskTypeCreate.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // btnCreate
             // 
@@ -258,28 +289,10 @@
             this.lblTaskList.TabIndex = 44;
             this.lblTaskList.Text = "Danh sách công việc";
             // 
-            // btnMarkDone
-            // 
-            this.btnMarkDone.Location = new System.Drawing.Point(1307, 105);
-            this.btnMarkDone.Name = "btnMarkDone";
-            this.btnMarkDone.Size = new System.Drawing.Size(167, 34);
-            this.btnMarkDone.TabIndex = 45;
-            this.btnMarkDone.Text = "Đánh dấu đã làm";
-            this.btnMarkDone.UseVisualStyleBackColor = true;
-            // 
             // dgvTasks
             // 
             this.dgvTasks.AllowUserToAddRows = false;
             this.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMaCongViec,
-            this.colTieuDe,
-            this.colLoaiCongViec,
-            this.colThoiGianBatDau,
-            this.colThoiGianKetThuc,
-            this.colMucDo,
-            this.colTrangThai,
-            this.colMoTa});
             this.dgvTasks.Location = new System.Drawing.Point(327, 145);
             this.dgvTasks.Name = "dgvTasks";
             this.dgvTasks.RowHeadersWidth = 51;
@@ -297,110 +310,6 @@
             this.btnLoadJSON.Text = "Load JSON";
             this.btnLoadJSON.UseVisualStyleBackColor = true;
             // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(165, 99);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(67, 16);
-            this.lblStatus.TabIndex = 42;
-            this.lblStatus.Text = "Trạng thái";
-            // 
-            // chkDone
-            // 
-            this.chkDone.AutoSize = true;
-            this.chkDone.Location = new System.Drawing.Point(168, 118);
-            this.chkDone.Name = "chkDone";
-            this.chkDone.Size = new System.Drawing.Size(71, 20);
-            this.chkDone.TabIndex = 43;
-            this.chkDone.Text = "Đã làm";
-            this.chkDone.UseVisualStyleBackColor = true;
-            // 
-            // chkInProgress
-            // 
-            this.chkInProgress.AutoSize = true;
-            this.chkInProgress.Location = new System.Drawing.Point(168, 144);
-            this.chkInProgress.Name = "chkInProgress";
-            this.chkInProgress.Size = new System.Drawing.Size(86, 20);
-            this.chkInProgress.TabIndex = 44;
-            this.chkInProgress.Text = "Đang làm";
-            this.chkInProgress.UseVisualStyleBackColor = true;
-            // 
-            // chkOverdue
-            // 
-            this.chkOverdue.AutoSize = true;
-            this.chkOverdue.Location = new System.Drawing.Point(168, 170);
-            this.chkOverdue.Name = "chkOverdue";
-            this.chkOverdue.Size = new System.Drawing.Size(87, 20);
-            this.chkOverdue.TabIndex = 45;
-            this.chkOverdue.Text = "Quá hạng";
-            this.chkOverdue.UseVisualStyleBackColor = true;
-            // 
-            // btnApplyFilter
-            // 
-            this.btnApplyFilter.Location = new System.Drawing.Point(89, 292);
-            this.btnApplyFilter.Name = "btnApplyFilter";
-            this.btnApplyFilter.Size = new System.Drawing.Size(106, 34);
-            this.btnApplyFilter.TabIndex = 48;
-            this.btnApplyFilter.Text = "Lọc";
-            this.btnApplyFilter.UseVisualStyleBackColor = true;
-            // 
-            // colMaCongViec
-            // 
-            this.colMaCongViec.HeaderText = "Mã";
-            this.colMaCongViec.MinimumWidth = 6;
-            this.colMaCongViec.Name = "colMaCongViec";
-            this.colMaCongViec.Width = 125;
-            // 
-            // colTieuDe
-            // 
-            this.colTieuDe.HeaderText = "Tiêu đề";
-            this.colTieuDe.MinimumWidth = 6;
-            this.colTieuDe.Name = "colTieuDe";
-            this.colTieuDe.Width = 125;
-            // 
-            // colLoaiCongViec
-            // 
-            this.colLoaiCongViec.HeaderText = "Loại công việc";
-            this.colLoaiCongViec.MinimumWidth = 6;
-            this.colLoaiCongViec.Name = "colLoaiCongViec";
-            this.colLoaiCongViec.Width = 125;
-            // 
-            // colThoiGianBatDau
-            // 
-            this.colThoiGianBatDau.HeaderText = "Thời gian bắt đầu";
-            this.colThoiGianBatDau.MinimumWidth = 6;
-            this.colThoiGianBatDau.Name = "colThoiGianBatDau";
-            this.colThoiGianBatDau.Width = 125;
-            // 
-            // colThoiGianKetThuc
-            // 
-            this.colThoiGianKetThuc.HeaderText = "Thời gian kết thúc";
-            this.colThoiGianKetThuc.MinimumWidth = 6;
-            this.colThoiGianKetThuc.Name = "colThoiGianKetThuc";
-            this.colThoiGianKetThuc.Width = 125;
-            // 
-            // colMucDo
-            // 
-            this.colMucDo.HeaderText = "Mức độ";
-            this.colMucDo.MinimumWidth = 6;
-            this.colMucDo.Name = "colMucDo";
-            this.colMucDo.Width = 125;
-            // 
-            // colTrangThai
-            // 
-            this.colTrangThai.HeaderText = "Trạng thái";
-            this.colTrangThai.MinimumWidth = 6;
-            this.colTrangThai.Name = "colTrangThai";
-            this.colTrangThai.Width = 125;
-            // 
-            // colMoTa
-            // 
-            this.colMoTa.HeaderText = "Mô tả";
-            this.colMoTa.MinimumWidth = 6;
-            this.colMoTa.Name = "colMoTa";
-            this.colMoTa.Width = 125;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,7 +317,6 @@
             this.ClientSize = new System.Drawing.Size(1502, 563);
             this.Controls.Add(this.btnLoadJSON);
             this.Controls.Add(this.dgvTasks);
-            this.Controls.Add(this.btnMarkDone);
             this.Controls.Add(this.lblTaskList);
             this.Controls.Add(this.btnSaveJSON);
             this.Controls.Add(this.btnCreate);
@@ -419,7 +327,6 @@
             this.Controls.Add(this.grpFilter);
             this.Name = "Home";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.grpFilter.ResumeLayout(false);
             this.grpFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasks)).EndInit();
@@ -448,7 +355,6 @@
         private System.Windows.Forms.Button btnSaveJSON;
         public System.Windows.Forms.Label lblFilter;
         private System.Windows.Forms.Label lblTaskList;
-        private System.Windows.Forms.Button btnMarkDone;
         private System.Windows.Forms.DataGridView dgvTasks;
         private System.Windows.Forms.Button btnLoadJSON;
         private System.Windows.Forms.CheckBox chkOverdue;
@@ -456,14 +362,6 @@
         private System.Windows.Forms.CheckBox chkDone;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnApplyFilter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaCongViec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTieuDe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colLoaiCongViec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colThoiGianBatDau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colThoiGianKetThuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMucDo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTrangThai;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMoTa;
     }
 }
 

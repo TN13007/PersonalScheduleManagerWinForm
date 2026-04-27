@@ -14,6 +14,14 @@ class EventItem : ScheduleItem
         throw new NotImplementedException();
     }
 
-    public string Description { get => _description; set => _description = value; }
-    public string Location { get => _location; set => _location = value; }
+    public string Description
+    {
+        get { return _description; }
+        set { _description = value; }
+    }
+    public string Location
+    {
+        get { return _location; }
+        set { _location = value; }
+    }
 }

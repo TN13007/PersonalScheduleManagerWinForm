@@ -12,6 +12,10 @@ class FastMeetingItem : ScheduleItem
     {
         throw new NotImplementedException();
     }
-    public DateTime ReminderTime { get => _reminderTime; set => _reminderTime = value; }
+    public DateTime ReminderTime
+    {
+        get { return _reminderTime; }
+        set { _reminderTime = value; }
+    }
 }
 

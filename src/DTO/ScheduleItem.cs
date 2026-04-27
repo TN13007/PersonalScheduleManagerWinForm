@@ -10,14 +10,43 @@ abstract class ScheduleItem
     private DateTime _endDate;
     private TaskStatus _status;
     private Priority _priority;
+    private bool _isDone;
 
     abstract public ScheduleItem showInformation();
-   
+    public string Title
+    {
+        get { return _title; }
+        set { _title = value; }
+    }
 
-    public string Title { get => _title; set => _title = value; }
-    public DateTime StartDate { get => _startDate; set => _startDate = value; }
-    public DateTime EndDate { get => _endDate; set => _endDate = value; }
-    public TaskStatus Status { get => _status; set => _status = value; }
-    public Priority Priority { get => _priority; set => _priority = value; }
+    public DateTime StartDate
+    {
+        get { return _startDate; }
+        set { _startDate = value; }
+    }
+
+    public DateTime EndDate
+    {
+        get { return _endDate; }
+        set { _endDate = value; }
+    }
+
+    public TaskStatus Status
+    {
+        get { return _status; }
+        set { _status = value; }
+    }
+
+    public Priority Priority
+    {
+        get { return _priority; }
+        set { _priority = value; }
+    }
+
+    public bool IsDone
+    {
+        get { return _isDone; }
+        set { _isDone = value; }
+    }
 }
 

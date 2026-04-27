@@ -75,7 +75,6 @@ namespace Presentation
             StyleButton(btnLoadJSON, "#4285F4", "Tải dữ liệu từ file JSON (Ctrl+O)");
             StyleButton(btnEdit, "#FBBC05", "Chỉnh sửa công việc đã chọn (Ctrl+E)");
             StyleButton(btnDelete, "#EA4335", "Xóa công việc đã chọn (Delete)");
-            StyleButton(btnMarkDone, "#0F9D58", "Đánh dấu công việc đã hoàn thành");
             StyleButton(btnApplyFilter, "#4285F4", "Áp dụng bộ lọc (Ctrl+F)");
 
             // DataGridView styling
@@ -188,7 +187,6 @@ namespace Presentation
             chkOverdue.TabIndex = tabIndex++;
             btnApplyFilter.TabIndex = tabIndex++;
             dgvTasks.TabIndex = tabIndex++;
-            btnMarkDone.TabIndex = tabIndex++;
             btnEdit.TabIndex = tabIndex++;
             btnDelete.TabIndex = tabIndex++;
         }
@@ -291,92 +289,6 @@ namespace Presentation
             base.OnFormClosing(e);
         }
 
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void monthCalendar1_DateChanged_1(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click_1(object sender, EventArgs e)
         {
             string selectedValue = cboTaskTypeCreate.SelectedItem?.ToString() ?? "";
@@ -395,31 +307,6 @@ namespace Presentation
                     MessageBox.Show("Vui lòng chọn một loại để tạo.");
                     break;
             }
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

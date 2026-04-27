@@ -13,6 +13,7 @@ abstract class ScheduleItem
     private bool _isDone;
 
     abstract public ScheduleItem showInformation();
+
     public string Title
     {
         get { return _title; }
@@ -42,11 +43,26 @@ abstract class ScheduleItem
         get { return _priority; }
         set { _priority = value; }
     }
-
-    public bool IsDone
+    /// cái này có thể không cần thiết vì đã có TaskStatus để quản lý trạng thái công việc.
+    //public bool IsDone
+    //{
+    //    get { return _isDone; }
+    //    set { _isDone = value; }
+    //}
+    // 1. Constructor không tham số: BẮT BUỘC phải có để thư viện JSON có thể hoạt động
+    public ScheduleItem()
     {
-        get { return _isDone; }
-        set { _isDone = value; }
+    }
+
+    // 2. Constructor có tham số: Dùng để các lớp con gọi qua từ khóa 'base'
+    public ScheduleItem(string title, DateTime startDate, DateTime endDate, Priority priority)
+    {
+        this._title = title;
+        this._startDate = startDate;
+        this._endDate = endDate;
+        this._priority = priority;
+        this._isDone = false; // Mặc định khi tạo mới là chưa xong
+        this._status = TaskStatus.Review; // Gán mặc định là Review khi vừa tạo mới
     }
 }
 

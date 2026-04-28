@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-
-class DoingItem : ScheduleItem
+namespace DTO
 {
-    private string _description;
-
-    public override ScheduleItem showInformation()
+    public class DoingItem : ScheduleItem
     {
-        throw new NotImplementedException();
-    }
+        private string _description;
 
-    public string Description
-    {
-        get { return _description; }
-        set { _description = value; }
+        public override void ShowInformation()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Description
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
     }
 }

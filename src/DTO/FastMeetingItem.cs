@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-
-class FastMeetingItem : ScheduleItem
+namespace DTO
 {
-    private DateTime _reminderTime;
+    public class FastMeetingItem : ScheduleItem
+    {
+        private DateTime _reminderTime;
 
-    public override ScheduleItem showInformation()
-    {
-        throw new NotImplementedException();
-    }
-    public DateTime ReminderTime
-    {
-        get { return _reminderTime; }
-        set { _reminderTime = value; }
+        public override void ShowInformation()
+        {
+            throw new NotImplementedException();
+        }
+        public DateTime ReminderTime
+        {
+            get { return _reminderTime; }
+            set { _reminderTime = value; }
+        }
     }
 }
 

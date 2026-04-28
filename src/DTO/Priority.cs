@@ -1,5 +1,8 @@
-﻿public enum Priority
+﻿namespace DTO
 {
-    Normal,
-    Important
+    public enum Priority
+    {
+        Normal,
+        Important
+    }
 }

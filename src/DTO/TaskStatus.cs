@@ -1,6 +1,9 @@
-﻿public enum TaskStatus
+﻿namespace DTO
 {
-    Review,
-    Done,
-    Overdue
+    public enum TaskStatus
+    {
+        Review,
+        Done,
+        Overdue
+    }
 }

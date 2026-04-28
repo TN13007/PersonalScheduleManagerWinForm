@@ -43,8 +43,19 @@
   <ItemGroup>
     <Compile Include="Builder\Class2.cs" />
     <Compile Include="Business\Class3.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="StatusService.cs" />
+    <Compile Include="ScheduleService.cs" />
+    <Compile Include="ValidationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{c4236a9b-4413-41fb-96ab-686c9a2b6fa2}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

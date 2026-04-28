@@ -11,7 +11,7 @@ namespace BUS
             if(task != null)
             {
                 task.Status = TaskStatus.Done;
-                task.IsDone = true;
+               
             }
         }
         public void CapNhatQuaHan(List<ScheduleItem> tasks)
@@ -20,7 +20,7 @@ namespace BUS
 
             for (int i = 0; i < tasks.Count; i++)
             {
-                if (tasks[i].EndDate < now && !tasks[i].IsDone)
+                if (tasks[i].EndDate < now && tasks[i].Status != TaskStatus.Done)
                 {
                     tasks[i].Status = TaskStatus.Overdue;
                 }

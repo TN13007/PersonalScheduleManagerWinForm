@@ -62,48 +62,48 @@ namespace BUS
             }
             return false;
         }
-        public ScheduleItem Find(int id)
-        {
-            for (int i = 0; i < danhSach.Count; i++)
-            {
-                if (danhSach[i].Id == id)
-                {
-                    return danhSach[i];
-                }
-            }
+        //public ScheduleItem Find(int id)
+        //{
+        //    for (int i = 0; i < danhSach.Count; i++)
+        //    {
+        //        if (danhSach[i].Id == id)
+        //        {
+        //            return danhSach[i];
+        //        }
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
 
-        public List<ScheduleItem> LayDanhSach()
-        {
-            statusService.CapNhatQuaHan(danhSach);
-            return danhSach;
-        }
+        //public List<ScheduleItem> LayDanhSach()
+        //{
+        //    statusService.CapNhatQuaHan(danhSach);
+        //    return danhSach;
+        //}
 
-        public bool DanhDauDaLam(int id)
-        {
-            ScheduleItem task = Find(id);
+        //public bool DanhDauDaLam(int id)
+        //{
+        //    ScheduleItem task = Find(id);
 
-            if (task == null)
-            {
-                return false;
-            }
+        //    if (task == null)
+        //    {
+        //        return false;
+        //    }
 
-            statusService.MarkDone(task);
-            return true;
-        }
+        //    statusService.MarkDone(task);
+        //    return true;
+        //}
 
-        public void GanDanhSach(List<ScheduleItem> danhSachMoi)
-        {
-            if (danhSachMoi == null)
-            {
-                danhSach = new List<ScheduleItem>();
-            }
-            else
-            {
-                danhSach = danhSachMoi;
-            }
-        }
+        //public void GanDanhSach(List<ScheduleItem> danhSachMoi)
+        //{
+        //    if (danhSachMoi == null)
+        //    {
+        //        danhSach = new List<ScheduleItem>();
+        //    }
+        //    else
+        //    {
+        //        danhSach = danhSachMoi;
+        //    }
+        //}
     }
 }

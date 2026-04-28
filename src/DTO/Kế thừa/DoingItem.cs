@@ -5,8 +5,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-
-    class DoingItem : ScheduleItem
+    public class DoingItem : ScheduleItem
     {
         private string _description;
 
@@ -20,6 +19,7 @@ namespace DTO
             get { return _description; }
             set { _description = value; }
         }
+
         // 1. Constructor không tham số (BẮT BUỘC có để đọc/lưu file JSON)
         public DoingItem() : base()
         {

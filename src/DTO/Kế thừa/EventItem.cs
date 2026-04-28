@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class EventItem : ScheduleItem
+    public class EventItem : ScheduleItem
     {
         private string _location;
         private string _description;
@@ -14,6 +14,7 @@ namespace DTO
         {
             throw new NotImplementedException();
         }
+
         public string Description
         {
             get { return _description; }
@@ -24,6 +25,7 @@ namespace DTO
             get { return _location; }
             set { _location = value; }
         }
+
         // 1. Constructor không tham số (BẮT BUỘC có để thư viện JSON có thể đọc/tải dữ liệu lên)
         public EventItem() : base()
         {

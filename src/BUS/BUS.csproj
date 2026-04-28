@@ -42,10 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Builder\Class2.cs" />
-    <Compile Include="Business\Class3.cs" />
-    <Compile Include="StatusService.cs" />
-    <Compile Include="ScheduleService.cs" />
-    <Compile Include="ValidationService.cs" />
+    <Compile Include="Business\StatusService.cs" />
+    <Compile Include="Business\ScheduleService.cs" />
+    <Compile Include="Business\ValidationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

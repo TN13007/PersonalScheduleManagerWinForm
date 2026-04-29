@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
+using DTO;
 
 namespace Presentation
 {
@@ -15,6 +17,7 @@ namespace Presentation
         private ToolTip toolTip;
         private Timer fadeTimer;
         private bool hasChanges = false;
+        private ScheduleService scheduleService = ScheduleService.Instance;
 
         public Doing()
         {
@@ -258,14 +261,43 @@ namespace Presentation
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DoingItem newItem = new DoingItem
+                {
+                    Title = txtTitle.Text,
+                    StartDate = dtpStartDate.Value.Date + TimeSpan.Parse(txtStartTime.Text),
+                    EndDate = dtpEndDate.Value.Date + TimeSpan.Parse(txtEndTime.Text),
+                    Description = txtDescription.Text,
+                    Priority = rdoImportant.Checked ? Priority.Important : Priority.Normal
 
+                };
+                bool isAdded = scheduleService.AddTask(newItem);
+
+                if (isAdded)
+                {
+                    MessageBox.Show("Công việc đã được thêm thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi xảy ra khi thêm công việc. Vui lòng thử lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Định dạng thời gian không hợp lệ. Vui lòng nhập theo định dạng HH:mm.", "Lỗi định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

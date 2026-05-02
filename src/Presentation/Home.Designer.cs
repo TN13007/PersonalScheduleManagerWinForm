@@ -126,7 +126,7 @@
             this.chkOverdue.AutoSize = true;
             this.chkOverdue.Location = new System.Drawing.Point(168, 170);
             this.chkOverdue.Name = "chkOverdue";
-            this.chkOverdue.Size = new System.Drawing.Size(87, 20);
+            this.chkOverdue.Size = new System.Drawing.Size(79, 20);
             this.chkOverdue.TabIndex = 45;
             this.chkOverdue.Text = "Quá hạn";
             this.chkOverdue.UseVisualStyleBackColor = true;
@@ -292,6 +292,7 @@
             // dgvTasks
             // 
             this.dgvTasks.AllowUserToAddRows = false;
+            this.dgvTasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTasks.Location = new System.Drawing.Point(327, 145);
             this.dgvTasks.Name = "dgvTasks";

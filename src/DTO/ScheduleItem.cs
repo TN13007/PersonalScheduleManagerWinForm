@@ -16,6 +16,11 @@ namespace DTO
         //public abstract void ShowInformation();
 
         abstract public ScheduleItem showInformation();
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
 
         public string Title
         {
@@ -24,11 +29,7 @@ namespace DTO
         }
 
 
-        public int Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+        
 
 
         public DateTime StartDate
@@ -58,13 +59,13 @@ namespace DTO
 
 
 
-       
+
         /// cái này có thể không cần thiết vì đã có TaskStatus để quản lý trạng thái công việc.
-        //public bool IsDone
-        //{
-        //    get { return _isDone; }
-        //    set { _isDone = value; }
-        //}
+        public bool IsDone
+        {
+            get { return _isDone; }
+            set { _isDone = value; }
+        }
         // 1. Constructor không tham số: BẮT BUỘC phải có để thư viện JSON có thể hoạt động
         public ScheduleItem()
         {

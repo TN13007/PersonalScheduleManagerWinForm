@@ -19,14 +19,25 @@ namespace Presentation
         private Timer fadeTimer;
         private Dictionary<Button, Color> buttonColors;
 
+        private ScheduleService scheduleService = ScheduleService.Instance;
+
         public Home()
         {
             InitializeComponent();
             ApplyGoogleCalendarTheme();
             SetupUXEnhancements();
             ApplyFadeInEffect();
+
+            scheduleService.OnDataChanged += HienThiDanhSach;
+
+            HienThiDanhSach();
         }
 
+        private void HienThiDanhSach()
+        {
+            dgvTasks.DataSource = null;
+            dgvTasks.DataSource = scheduleService.LayListHienTai();
+        }
         private void ApplyGoogleCalendarTheme()
         {
             // Form styling
